@@ -682,6 +682,35 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "getExtrationRendition",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "{{key}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/renditions/extract",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"dms",
+						"objects",
+						"{{objectId}}",
+						"contents",
+						"renditions",
+						"extract"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -708,13 +737,13 @@
 	],
 	"variable": [
 		{
-			"id": "fa246be4-d080-483b-83c0-293e734567df",
+			"id": "6875780f-a1ae-47ac-9641-0e1817737eaf",
 			"key": "key",
 			"value": "xxx",
 			"type": "string"
 		},
 		{
-			"id": "14c2d3e8-87be-443f-9a60-cc243d3fdb6d",
+			"id": "d5292728-c581-4bd6-bf1c-fbd8d31348a9",
 			"key": "ip",
 			"value": "api.yuuvis.io",
 			"type": "string"
