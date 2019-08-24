@@ -30,13 +30,11 @@
 					"formdata": [
 						{
 							"key": "data",
-							"type": "file",
-							"src": "/D:/Projects/azuredevportalsampletest/src/main/resources/indexData_document.json"
+							"type": "file"
 						},
 						{
 							"key": "cid_63apple",
-							"type": "file",
-							"src": "/D:/Projects/azuredevportalsampletest/src/main/resources/handwritten_ocrtest.jpg"
+							"type": "file"
 						}
 					]
 				},
@@ -70,19 +68,16 @@
 					"formdata": [
 						{
 							"key": "data",
-							"value": "",
 							"description": "JSON-File mit den Indexdaten zum Objekt (indexDataSingle.json)",
 							"type": "file"
 						},
 						{
 							"key": "cid_63apple",
-							"value": "",
 							"description": "E-Mail, die importiert werden soll (import.eml)",
 							"type": "file"
 						},
 						{
 							"key": "cid_60apple",
-							"value": "",
 							"description": "E-Mail, die importiert werden soll (import2.eml)",
 							"type": "file"
 						}
@@ -390,10 +385,7 @@
 					}
 				],
 				"body": {
-					"mode": "file",
-					"file": {
-						"src": "/D:/Projects/azuredevportalsampletest/src/main/resources/handwritten_ocrtest.jpg"
-					}
+					"mode": "file"
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/file",
@@ -727,10 +719,7 @@
 					}
 				],
 				"body": {
-					"mode": "file",
-					"file": {
-						"src": "/C:/Users/Lüdemann/git_projects/Postman/newschema.xml"
-					}
+					"mode": "file"
 				},
 				"url": {
 					"raw": "https://{{ip}}/admin/schema/validate",
@@ -764,10 +753,7 @@
 					}
 				],
 				"body": {
-					"mode": "file",
-					"file": {
-						"src": "/C:/Users/Lüdemann/git_projects/Postman/newschema.xml"
-					}
+					"mode": "file"
 				},
 				"url": {
 					"raw": "https://{{ip}}/admin/schema/",
@@ -811,7 +797,7 @@
 		{
 			"id": "5594032d-3f14-42bf-809f-4fd916bc8aa6",
 			"key": "key",
-			"value": "xxx",
+			"value": "",
 			"type": "string"
 		},
 		{
