@@ -258,7 +258,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object WHERE CONTAINS('mensch') \",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
+					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms/objects/search",
