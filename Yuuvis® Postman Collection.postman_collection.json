@@ -158,33 +158,6 @@
 			"response": []
 		},
 		{
-			"name": "getVersionList",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{key}}"
-					}
-				],
-				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions",
-					"protocol": "https",
-					"host": [
-						"{{ip}}"
-					],
-					"path": [
-						"dms",
-						"objects",
-						"{{objectId}}",
-						"versions"
-					]
-				},
-				"description": "Die Indexdaten aller Versionen des Objektes mit der ID {{objectId}} werden abgeholt."
-			},
-			"response": []
-		},
-		{
 			"name": "getContent",
 			"request": {
 				"method": "GET",
@@ -845,6 +818,12 @@
 			"id": "a10aee5e-d8c3-4d4c-a978-2efde03cc960",
 			"key": "ip",
 			"value": "api.yuuvis.io",
+			"type": "string"
+		},
+		{
+			"id": "c60aee5e-d8c3-1337-a978-2efde03c2610",
+			"key": "objectId",
+			"value": "",
 			"type": "string"
 		}
 	]
