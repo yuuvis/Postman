@@ -7,7 +7,8 @@ You'll need to configure your subscription key inside the collection. To do that
 
 
 
-#Metadata
+# Metadata
+
 This is our Sample metadata.json file. Please feel free to download this and use it to get started. 
 
 [metatdata.json](./metadata.json)
