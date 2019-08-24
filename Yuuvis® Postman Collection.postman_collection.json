@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "81ede7ce-7008-4162-a979-2b94d661c5d5",
+		"_postman_id": "fabb5c6c-3212-4093-b47a-19328c694d87",
 		"name": "Yuuvis® Postman Collection",
 		"description": "Für diese Collection muss eine Environment mit folgenden Parametern erstellt werden:\n\n\"ip\": die IP des Systems, gegen das getestet werden soll\n\n\"objectId\": die ID eines Objektes, für das Indexdaten/ Content geholt werden soll",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -253,12 +253,12 @@
 					},
 					{
 						"key": "Ocp-Apim-Subscription-Key",
-						"value": "298c663e133a46fd8ac99ff476364727"
+						"value": "{{key}}"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object WHERE CONTAINS('mensch') \",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 0\r\n  }\r\n}"
+					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object WHERE CONTAINS('mensch') \",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms/objects/search",
@@ -711,6 +711,105 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get raw tenant schema",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{ip}}/admin/schema",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"admin",
+						"schema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{key}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/Lüdemann/git_projects/Postman/newschema.xml"
+					}
+				},
+				"url": {
+					"raw": "https://{{ip}}/admin/schema/validate",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"admin",
+						"schema",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/Lüdemann/git_projects/Postman/newschema.xml"
+					}
+				},
+				"url": {
+					"raw": "https://{{ip}}/admin/schema/",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"admin",
+						"schema",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -737,13 +836,13 @@
 	],
 	"variable": [
 		{
-			"id": "6875780f-a1ae-47ac-9641-0e1817737eaf",
+			"id": "5594032d-3f14-42bf-809f-4fd916bc8aa6",
 			"key": "key",
 			"value": "xxx",
 			"type": "string"
 		},
 		{
-			"id": "d5292728-c581-4bd6-bf1c-fbd8d31348a9",
+			"id": "a10aee5e-d8c3-4d4c-a978-2efde03cc960",
 			"key": "ip",
 			"value": "api.yuuvis.io",
 			"type": "string"
