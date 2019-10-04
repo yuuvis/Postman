@@ -39,13 +39,13 @@
 					]
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects",
+					"raw": "https://{{ip}}/dms-core/objects",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects"
 					]
 				},
@@ -84,13 +84,13 @@
 					]
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects",
+					"raw": "https://{{ip}}/dms-core/objects",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects"
 					]
 				},
@@ -109,13 +109,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}"
 					]
@@ -135,13 +135,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/1",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/1",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -163,13 +163,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/file",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/contents/file",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"contents",
@@ -191,13 +191,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/{{versionNr}}/contents/file",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/contents/file",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -229,13 +229,13 @@
 					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/search",
+					"raw": "https://{{ip}}/dms-core/objects/search",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"search"
 					]
@@ -255,13 +255,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/history",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/history",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"history"
@@ -282,13 +282,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/actions/validate/digest",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/actions/validate/digest",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"actions",
@@ -311,13 +311,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/{{versionNr}}/actions/validate/digest",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/actions/validate/digest",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -350,13 +350,13 @@
 					"raw": "{\r\n\t\"objects\": [{\r\n\t\t\"properties\": {\r\n\t\t\t\"enaio:objectTypeId\": {\r\n\t\t\t\t\"value\": \"document\"\r\n\t\t\t},\r\n\t\t\t\"Name\": {\r\n\t\t\t\t\"value\": \"Update Email\"\r\n\t\t\t}\r\n\t\t}\r\n\t}]\r\n}"
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}"
 					]
@@ -388,13 +388,13 @@
 					"mode": "file"
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/file",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/contents/file",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"contents",
@@ -420,13 +420,13 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}"
 					]
@@ -451,13 +451,13 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/{{versionNr}}",
+					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -480,13 +480,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/slide",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/slide",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -511,13 +511,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/pdf",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/pdf",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -542,13 +542,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/text",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/text",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"versions",
@@ -573,13 +573,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/renditions/slide",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/slide",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"contents",
@@ -602,13 +602,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/renditions/pdf",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/pdf",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"contents",
@@ -631,13 +631,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/renditions/text",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/text",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"contents",
@@ -660,13 +660,13 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms/objects/{{objectId}}/contents/renditions/extract",
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/extract",
 					"protocol": "https",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-view",
 						"objects",
 						"{{objectId}}",
 						"contents",
