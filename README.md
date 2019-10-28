@@ -1,8 +1,8 @@
 # Postman
 
-This repository holds the yuuvis® API calls, written in Json format to run in [Postman](https://www.getpostman.com/). There is also a sample metadata file.
+This repository holds the yuuvis® API calls to run in [Postman](https://www.getpostman.com/). There is also a sample metadata file.
 
-Import the collection.json, metadata.json and newschema.xml file into [Postman](https://www.getpostman.com/) and follow Postman instructions to make calls. 
+Import the collection.json into [Postman](https://www.getpostman.com/)and feel free to make use of the sample metadata.json and newschema.xml files to make calls.
 
 To learn more about yuuvis® products, please refer to [yuuvis.io](https://yuuvis.io/), try out endpoints in our [developer portal](https://yuuvis.io/Apis) or visit our [Wiki](https://github.com/yuuvis/Documentation/wiki) for more detailed information ...
 
