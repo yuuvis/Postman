@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "fabb5c6c-3212-4093-b47a-19328c694d87",
+		"_postman_id": "ac04825b-4aaf-4a18-82c4-1c5122a8cfb4",
 		"name": "Yuuvis® Postman Collection",
 		"description": "This collection expects a Postman environment with the following variables:\n\n\"ip\": the IP of the yuuvis® system that you want to test \n\n\"objectId\": the ID of the object that you're currently tryingt to retrieve",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "insertObject",
+			"name": "Store a single document",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -31,12 +31,14 @@
 						{
 							"key": "data",
 							"description": "JSON-File containing metadata for a single object.",
-							"type": "file"
+							"type": "file",
+							"src": []
 						},
 						{
 							"key": "cid_63apple",
 							"description": "Content object to be imported.",
-							"type": "file"
+							"type": "file",
+							"src": []
 						}
 					]
 				},
@@ -51,12 +53,12 @@
 						"objects"
 					]
 				},
-				"description": "This Request requires a metadata json body part and a binary content body part."
+				"description": "This endpoint requires a multipart body with a metadata part as well as a binary content part.\r\n\r\nSave your metadata as file (e.g. metadata.json) and use it for the data body part. For the binary content, the cid_63apple parameter, you can use any file you'd like to store.\r\n\r\nIf the request is successful, the metadata of the now stored document will be returned in JSON format.\r\n\r\n[Read about Storing Documents with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
 		{
-			"name": "insertObjects",
+			"name": "Store multiple documents",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -71,17 +73,20 @@
 						{
 							"key": "data",
 							"description": "JSON-File containing metadata for multiple objects.",
-							"type": "file"
+							"type": "file",
+							"src": []
 						},
 						{
 							"key": "cid_63apple",
 							"description": "First content object to be imported.",
-							"type": "file"
+							"type": "file",
+							"src": []
 						},
 						{
 							"key": "cid_60apple",
 							"description": "Second content object to be imported.",
-							"type": "file"
+							"type": "file",
+							"src": []
 						}
 					]
 				},
@@ -96,12 +101,12 @@
 						"objects"
 					]
 				},
-				"description": "This request requires a metadata json body part describing n objects and 1-n binary content body parts."
+				"description": "This endpoint requires a multipart body with a metadata part as well as many binary content parts as were indicated in the metadata json file.\r\n\r\nSave your metadata as file (e.g. metadata.json) and use it for the data parameter. For the binary contents, the cid_63apple parameter, you can use any files you'd like to store.\r\n\r\nIf the request is successful, the metadata of the now stored documents will be returned in JSON format.\r\n\r\n[Read about Storing Documents with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
 		{
-			"name": "getMetadata",
+			"name": "Get document metadata by ID",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -122,12 +127,12 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "This request retrieves the metadata of the object with the ID {{objectId}}."
+				"description": "This endpoint returns the metadata related to the document (object) that matches the *objectId* parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "getMetadataVersion",
+			"name": "Get document metadata by ID (specified version)",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -150,12 +155,12 @@
 						"1"
 					]
 				},
-				"description": "This request retrieves the metadata of the specified version of the object with the ID {{objectId}}."
+				"description": "This endpoint returns the metadata of the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "getContent",
+			"name": "Get document content by ID",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -178,12 +183,12 @@
 						"file"
 					]
 				},
-				"description": "This request retrieves the content of the object with the ID {{objectId}}."
+				"description": "This endpoint returns the original content file of the document (object) that matches the *objectId* parameter.\r\n\r\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "getContentOfVersion",
+			"name": "Get document content by ID (specified version)",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -208,12 +213,12 @@
 						"file"
 					]
 				},
-				"description": "This request retrieves the content of the specified version of the object with the ID {{objectId}}."
+				"description": "This endpoint returns the content of the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "search",
+			"name": "Search documents by search query",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -242,12 +247,12 @@
 						"search"
 					]
 				},
-				"description": "This request evaluates the Search query that it's presented by its JSON body."
+				"description": "This endpoint requires a JSON body containing your search query.\r\n\r\nThe search parameters skipCount and maxItems allow paging for search queries, whereby maxItems defines the maximum number of entries in the hit list and skipCount the maximum number of entries to be skipped.\r\n\r\n[Learn about the yuuvis® CMIS-Based Query Language](https://yuuvis.io/Documentation/Query-language)"
 			},
 			"response": []
 		},
 		{
-			"name": "getHistory",
+			"name": "Get a list of history entries by ID",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -269,12 +274,12 @@
 						"history"
 					]
 				},
-				"description": "This request retrieves the History/Audit entries of the object with the ID {{objectId}}."
+				"description": "This endpoint retrieves information about the actions and modifications that have been carried out for the given document (object) that matches the *objectId* parameter. \r\n\r\nEach action or modification is stored in a separate history entry.\r\n\r\n[Read about Retrieving the History Entries of a Document with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-history-entries)"
 			},
 			"response": []
 		},
 		{
-			"name": "validateContentDigest",
+			"name": "Validate content digest by ID",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -298,12 +303,12 @@
 						"digest"
 					]
 				},
-				"description": "This request compares a fresh content digest computation result against the content digest saved in the objects' metadata to verify validity of the content file."
+				"description": "For already imported documents, a content digest is automatically generated and stored (Secure Hash Algorythm, SHA256)\r\n\r\nTo validate the content digest for a stored document, you use this endpoint. Send a request with the objectId which generates a new content digest based on the currently stored document. This newly generated content digest is compared with the formerly generated and stored one.\r\n\r\n[Read about Content Digest Generation and Validation with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store#ImportingDocumentsviaCoreAPI-ContentDigestGeneration)"
 			},
 			"response": []
 		},
 		{
-			"name": "validateContentDigestOfVersion",
+			"name": "Validate content digest by ID (specified version)",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -329,12 +334,12 @@
 						"digest"
 					]
 				},
-				"description": "This request validates the content digest of the specified version of the object with the ID {{objectId}}."
+				"description": "The \"Validate content digest of specified version by ID\" endpoint validates the content digest of the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter.\r\n\r\n\r\n[Read about Content Digest - Generation and Validation with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store#ImportingDocumentsviaCoreAPI-ContentDigestGeneration)"
 			},
 			"response": []
 		},
 		{
-			"name": "updateDmsObject",
+			"name": "Update document metadata by ID",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -363,12 +368,12 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "This request updates the metadata of the object with the ID {{objectId}}."
+				"description": "This endpoint updates the metadata of the document (object) that matches the *objectId* parameter.\r\n\r\nTo update the metadata send the request with the new metadata as request body and the ID of the document (object) as objectId. If one of the properties is missing in the new metadata, it will be removed from the document (object).\r\n\r\nMost of the system properties cannot be updated or are updated automatically. If the new metadata contains these properties, their values must match the values of the current version. Hence you can retrieve the current metadata using the “GET document metadata by ID“ endpoint first, to use the result. Edit some properties and post it again using this endpoint.\r\n\r\n[Read about Updating Documents with the yuuvis® API](https://yuuvis.io/Documentation/Update-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "updateContent",
+			"name": "Update document content by ID",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -387,7 +392,8 @@
 					}
 				],
 				"body": {
-					"mode": "file"
+					"mode": "file",
+					"file": {}
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/contents/file",
@@ -403,12 +409,12 @@
 						"file"
 					]
 				},
-				"description": "This request updates the content of the object with the ID {{objectId}}"
+				"description": "This endpoint updates the content file of the document (object) that matches the *objectId* parameter.\r\n\r\nYou can name the content by passing the file name over to the Content-Disposition header.\r\n\r\n[Read about Updating Documents with the yuuvis® API](https://yuuvis.io/Documentation/Update-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "deleteDmsObject",
+			"name": "Delete document by ID",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -433,12 +439,12 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "This request deletes the object with the ID {{objectId}}."
+				"description": "This endpoint deletes the document (object) that matches the given *objectId* parameter.\n\n[Read about Deleting Documents with the yuuvis® API](https://yuuvis.io/Documentation/Delete-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "deleteDmsObjectVersion",
+			"name": "Delete document by ID (specified version)",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -466,12 +472,42 @@
 						"{{versionNr}}"
 					]
 				},
-				"description": "This request deletes the specified version of the object with the ID {{objectId}}."
+				"description": "this endpoint deletes the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter.\n\n[Read about Deleting Documents with the yuuvis® API](https://yuuvis.io/Documentation/Delete-documents)"
 			},
 			"response": []
 		},
 		{
-			"name": "getImageRenditionVersion",
+			"name": "Get image rendition",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "{{key}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/slide",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"dms-view",
+						"objects",
+						"{{objectId}}",
+						"contents",
+						"renditions",
+						"slide"
+					]
+				},
+				"description": "This endpoint generates and returns a PNG file of the content's first page of the document (object) that matches the *objectId* parameter. This PNG file is a small preview with the maximum dimensions 256x256.\r\n\r\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get image rendition (specified version)",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -497,12 +533,43 @@
 						"renditions",
 						"slide"
 					]
-				}
+				},
+				"description": "This endpoint generates and returns a PNG file of the content's first page of the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter. This PNG file is a small preview with the maximum dimensions 256x256.\r\n\r\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
 			},
 			"response": []
 		},
 		{
-			"name": "getPdfRenditionVersion",
+			"name": "Get PDF rendition",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "{{key}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/pdf",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"dms-view",
+						"objects",
+						"{{objectId}}",
+						"contents",
+						"renditions",
+						"pdf"
+					]
+				},
+				"description": "This endpoint generates and returns a PDF rendition of the content of the document (object) that matches the objectId parameter. Note that the PDF file cannot be displayed using the portal. Please use another tool, such as Postman, to download the PDF rendition file.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get PDF rendition (specified version)",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -528,12 +595,43 @@
 						"renditions",
 						"pdf"
 					]
-				}
+				},
+				"description": "This endpoint generates and returns a PDF rendition of the content of the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter. Note that the PDF file cannot be displayed using the portal. Please use another tool, such as Postman, to download the PDF rendition file.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
 			},
 			"response": []
 		},
 		{
-			"name": "getTextRenditionVersion",
+			"name": "Get text rendition",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "{{key}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/text",
+					"protocol": "https",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"dms-view",
+						"objects",
+						"{{objectId}}",
+						"contents",
+						"renditions",
+						"text"
+					]
+				},
+				"description": "This endpoint generates and returns a text rendition of the content of the document (object) that matches the *objectId* parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get text rendition (specified version)",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -559,99 +657,13 @@
 						"renditions",
 						"text"
 					]
-				}
+				},
+				"description": "This endpoint generates and returns a text rendition of the content of the version matching the *versionNr* parameter of the document (object) that matches the *objectId* parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
 			},
 			"response": []
 		},
 		{
-			"name": "getImageRendition",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"type": "text",
-						"value": "{{key}}"
-					}
-				],
-				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/slide",
-					"protocol": "https",
-					"host": [
-						"{{ip}}"
-					],
-					"path": [
-						"dms-view",
-						"objects",
-						"{{objectId}}",
-						"contents",
-						"renditions",
-						"slide"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getPdfRendition",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"type": "text",
-						"value": "{{key}}"
-					}
-				],
-				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/pdf",
-					"protocol": "https",
-					"host": [
-						"{{ip}}"
-					],
-					"path": [
-						"dms-view",
-						"objects",
-						"{{objectId}}",
-						"contents",
-						"renditions",
-						"pdf"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getTextRendition",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"type": "text",
-						"value": "{{key}}"
-					}
-				],
-				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/text",
-					"protocol": "https",
-					"host": [
-						"{{ip}}"
-					],
-					"path": [
-						"dms-view",
-						"objects",
-						"{{objectId}}",
-						"contents",
-						"renditions",
-						"text"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getExtrationRendition",
+			"name": "Get extraction rendition",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -675,12 +687,25 @@
 						"renditions",
 						"extract"
 					]
-				}
+				},
+				"description": "This endpoint extracts and returns all metadata from the document (object) that matches the *objectId* parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)"
 			},
 			"response": []
 		},
 		{
-			"name": "get raw tenant schema",
+			"name": "Get the applied tenant schema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "This endpoint returns the applied schema of the tenant (JSON / XML) belonging to you as the logged on user. The applied schema is the tenant schema, enhanced by the global schema and the system properties.\r\n\r\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get raw tenant schema",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -700,12 +725,13 @@
 						"admin",
 						"schema"
 					]
-				}
+				},
+				"description": "The \"Get the raw tenant schema\" endpoint returns the raw schema of the tenant (XML) belonging to you as the logged on user.\r\n\r\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
 			},
 			"response": []
 		},
 		{
-			"name": "validate schema",
+			"name": "Validate a schema",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -721,7 +747,8 @@
 					}
 				],
 				"body": {
-					"mode": "file"
+					"mode": "file",
+					"file": {}
 				},
 				"url": {
 					"raw": "https://{{ip}}/admin/schema/validate",
@@ -734,28 +761,30 @@
 						"schema",
 						"validate"
 					]
-				}
+				},
+				"description": "This endpoint validates a schema and returns a list of validation error messages, if any.\r\n\r\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
 			},
 			"response": []
 		},
 		{
-			"name": "update schema",
+			"name": "Update the tenant schema",
 			"request": {
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/xml",
-						"type": "text"
+						"type": "text",
+						"value": "application/xml"
 					},
 					{
 						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{key}}",
-						"type": "text"
+						"type": "text",
+						"value": "{{key}}"
 					}
 				],
 				"body": {
-					"mode": "file"
+					"mode": "file",
+					"file": {}
 				},
 				"url": {
 					"raw": "https://{{ip}}/admin/schema/",
@@ -768,7 +797,8 @@
 						"schema",
 						""
 					]
-				}
+				},
+				"description": "This endpoint validates your schema first, before it will completely overwrite the existing one. If the schema is not valid, no update takes place.\n\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
 			},
 			"response": []
 		}
@@ -814,5 +844,6 @@
 			"value": "",
 			"type": "string"
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
