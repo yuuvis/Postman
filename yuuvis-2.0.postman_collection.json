@@ -155,7 +155,7 @@
 						"1"
 					]
 				},
-				"description": "This endpoint returns the metadata of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Get document metadata by ID (specified version)”** endpoint returns the metadata of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -910,19 +910,19 @@
 	],
 	"variable": [
 		{
-			"id": "0ef53bdf-b34f-4fa7-a451-a872a0c8ebb9",
+			"id": "857a5c07-2d17-4a33-ad89-c66f09a687c7",
 			"key": "key",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "f201730e-77f0-4b08-afe3-9363e193b6a1",
+			"id": "77c7ba73-ce7c-4208-924f-cc9c3960b9d8",
 			"key": "ip",
 			"value": "api.yuuvis.io",
 			"type": "string"
 		},
 		{
-			"id": "35837539-3eef-4ec1-b3a9-7af09afb7192",
+			"id": "594350e9-aa3a-4e3e-997a-fd042008d375",
 			"key": "objectId",
 			"value": "",
 			"type": "string"
