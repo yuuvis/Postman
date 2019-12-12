@@ -233,7 +233,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
+					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM system:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms-core/objects/search",
@@ -354,7 +354,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"objects\": [{\r\n\t\t\"properties\": {\r\n\t\t\t\"enaio:objectTypeId\": {\r\n\t\t\t\t\"value\": \"document\"\r\n\t\t\t},\r\n\t\t\t\"Name\": {\r\n\t\t\t\t\"value\": \"Update Email\"\r\n\t\t\t}\r\n\t\t}\r\n\t}]\r\n}"
+					"raw": "{\r\n\t\"objects\": [{\r\n\t\t\"properties\": {\r\n\t\t\t\"system:objectTypeId\": {\r\n\t\t\t\t\"value\": \"document\"\r\n\t\t\t},\r\n\t\t\t\"Name\": {\r\n\t\t\t\t\"value\": \"Update Email\"\r\n\t\t\t}\r\n\t\t}\r\n\t}]\r\n}"
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
