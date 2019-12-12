@@ -1,7 +1,7 @@
 {
     "objects": [{
         "properties": {
-            "enaio:objectTypeId": {
+            "system:objectTypeId": {
                 "value": "document"
             },
             "Name": {
