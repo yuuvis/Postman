@@ -1,7 +1,11 @@
 {
     "objects": [{
         "properties": {
+<<<<<<< HEAD
             "system:objectTypeId": {
+=======
+            "objectTypeId": {
+>>>>>>> support/2.0
                 "value": "document"
             },
             "Name": {
