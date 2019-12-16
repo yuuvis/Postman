@@ -1,10 +1,6 @@
 <schema xmlns="http://optimal-systems.org/ns/dmscloud/schema/v5.0/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-<<<<<<< HEAD:newschema.xml
         xsi:schemaLocation="http://optimal-systems.org/ns/dmscloud/schema/v5.0/dmsCloud-schema.xsd">
-=======
-        xsi:schemaLocation="http://optimal-systems.org/ns/dmscloud/schema/v5.0/ dmsCloud-schema.xsd">
->>>>>>> support/2.0:newschema-2.0.xml
         <propertyStringDefinition>
             <id>from</id>
             <propertyType>string</propertyType>
