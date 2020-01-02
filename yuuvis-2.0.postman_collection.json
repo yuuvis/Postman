@@ -233,7 +233,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM enaio:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
+					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM system:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "https://{{ip}}/dms-core/objects/search",
@@ -910,20 +910,20 @@
 	],
 	"variable": [
 		{
-			"id": "857a5c07-2d17-4a33-ad89-c66f09a687c7",
-			"key": "key",
+			"id": "77f21bf2-959e-46d2-b78c-929ba08deba9",
+			"key": "objectId",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "77c7ba73-ce7c-4208-924f-cc9c3960b9d8",
+			"id": "13a9c91d-b838-4285-b077-65a679eddc12",
 			"key": "ip",
-			"value": "api.yuuvis.io",
+			"value": "https://api.yuuvis.io",
 			"type": "string"
 		},
 		{
-			"id": "594350e9-aa3a-4e3e-997a-fd042008d375",
-			"key": "objectId",
+			"id": "d280e2c2-297e-49f3-98d2-ea2a2de94b66",
+			"key": "key",
 			"value": "",
 			"type": "string"
 		}
