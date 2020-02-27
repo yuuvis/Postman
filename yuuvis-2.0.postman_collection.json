@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2bf43a68-30ba-453e-8c14-109b4d909827",
+		"_postman_id": "e8b6d122-f20c-4804-bc05-240485b5bf3d",
 		"name": "Yuuvis® Postman Collection 2.0",
 		"description": "This collection expects a Postman environment with the following variables:\n\n\"ip\": the IP of the yuuvis® system that you want to test \n\n\"objectId\": the ID of the object that you're currently tryingt to retrieve",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -850,38 +850,6 @@
 					]
 				},
 				"description": "The **“Update the tenant schema”** endpoint validates your schema first, before it will completely overwrite the existing one. If the schema is not valid, no update takes place.\n\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
-			},
-			"response": []
-		},
-		{
-			"name": "Move object to Repository",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{key}}",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://{{ip}}/dms.core/objects/{{objectId}}/actions/move/contents/repositories/{{repoId}}",
-					"protocol": "https",
-					"host": [
-						"{{ip}}"
-					],
-					"path": [
-						"dms.core",
-						"objects",
-						"{{objectId}}",
-						"actions",
-						"move",
-						"contents",
-						"repositories",
-						"{{repoId}}"
-					]
-				},
-				"description": "The **“Move Object Content to Repository”** endpoint moves the document (object) specified the *objectId* path parameter into the repository specified by the *repoId* path parameter.\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		}
