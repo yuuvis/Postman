@@ -43,8 +43,8 @@
 					]
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects",
+					
 					"host": [
 						"{{ip}}"
 					],
@@ -91,8 +91,8 @@
 					]
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -116,8 +116,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -142,8 +142,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/1",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/1",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -170,8 +170,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/contents/file",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/contents/file",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -198,8 +198,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/contents/file",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/contents/file",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -236,8 +236,8 @@
 					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM system:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/search",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/search",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -262,8 +262,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/history",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/history",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -289,8 +289,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/actions/validate/digest",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/actions/validate/digest",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -318,8 +318,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/actions/validate/digest",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/actions/validate/digest",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -357,8 +357,8 @@
 					"raw": "{\r\n\t\"objects\": [{\r\n\t\t\"properties\": {\r\n\t\t\t\"objectTypeId\": {\r\n\t\t\t\t\"value\": \"document\"\r\n\t\t\t},\r\n\t\t\t\"Name\": {\r\n\t\t\t\t\"value\": \"Update Email\"\r\n\t\t\t}\r\n\t\t}\r\n\t}]\r\n}"
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -399,8 +399,8 @@
 					}
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -438,8 +438,8 @@
 					"file": {}
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/contents/file",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/contents/file",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -470,8 +470,8 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -501,8 +501,8 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -530,8 +530,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/slide",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/slide",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -560,8 +560,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/slide",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/slide",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -592,8 +592,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/pdf",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/pdf",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -622,8 +622,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/pdf",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/pdf",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -654,8 +654,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/text",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/text",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -684,8 +684,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/text",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/text",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -716,8 +716,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/extract",
-					"protocol": "https",
+					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/extract",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -740,8 +740,8 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://{{ip}}/dms/schema/native",
-					"protocol": "https",
+					"raw": "{{ip}}/dms/schema/native",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -767,8 +767,8 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{ip}}/admin/schema",
-					"protocol": "https",
+					"raw": "{{ip}}/admin/schema",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -802,8 +802,8 @@
 					"file": {}
 				},
 				"url": {
-					"raw": "https://{{ip}}/admin/schema/validate",
-					"protocol": "https",
+					"raw": "{{ip}}/admin/schema/validate",
+
 					"host": [
 						"{{ip}}"
 					],
@@ -838,8 +838,8 @@
 					"file": {}
 				},
 				"url": {
-					"raw": "https://{{ip}}/admin/schema/",
-					"protocol": "https",
+					"raw": "{{ip}}/admin/schema/",
+
 					"host": [
 						"{{ip}}"
 					],
