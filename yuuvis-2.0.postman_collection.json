@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "e8b6d122-f20c-4804-bc05-240485b5bf3d",
-		"name": "Yuuvis® Postman Collection 2.0",
+		"name": "Yuuvis® Ultimate Postman Collection 2.0",
 		"description": "This collection expects a Postman environment with the following variables:\n\n\"ip\": the IP of the yuuvis® system that you want to test \n\n\"objectId\": the ID of the object that you're currently tryingt to retrieve",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -44,7 +44,7 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects",
-					
+
 					"host": [
 						"{{ip}}"
 					],
@@ -53,7 +53,7 @@
 						"objects"
 					]
 				},
-				"description": "The **“Store one or more documents”** endpoint imports a given metadata file, and optionally, one or more content files, as objects in the authenticated users’ yuuvis® tenant storage. \r\n\r\nSave your metadata as file (e.g. metadata.json) and use it for the ‘data’ body part. For the binary content, the cid_63apple parameter, you can use any file you'd like to store. \r\n\r\nIf the request is successful, the metadata of the now stored document will be returned in JSON format. \r\n\r\n[Read about Storing Documents with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Store one or more documents”** endpoint imports a given metadata file, and optionally, one or more content files, as objects in the authenticated users’ yuuvis® tenant storage. \r\n\r\nSave your metadata as file (e.g. metadata.json) and use it for the ‘data’ body part. For the binary content, the cid_63apple parameter, you can use any file you'd like to store. \r\n\r\nIf the request is successful, the metadata of the now stored document will be returned in JSON format. \r\n\r\n[Read about Storing Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -101,7 +101,7 @@
 						"objects"
 					]
 				},
-				"description": "The **“Store one or more documents”** endpoint imports a given metadata file, and optionally, one or more content files, as objects in the authenticated users’ yuuvis® tenant storage. \r\n\r\nSave your metadata as file (e.g. metadata.json) and use it for the ‘data’ body part. For the binary content, the cid_63apple parameter, you can use any file you'd like to store. \r\n\r\nIf the request is successful, the metadata of the now stored document will be returned in JSON format. \r\n\r\n[Read about Storing Documents with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Store one or more documents”** endpoint imports a given metadata file, and optionally, one or more content files, as objects in the authenticated users’ yuuvis® tenant storage. \r\n\r\nSave your metadata as file (e.g. metadata.json) and use it for the ‘data’ body part. For the binary content, the cid_63apple parameter, you can use any file you'd like to store. \r\n\r\nIf the request is successful, the metadata of the now stored document will be returned in JSON format. \r\n\r\n[Read about Storing Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -127,7 +127,7 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "The **“Get document metadata by ID”** endpoint returns the metadata related to the document (object) that matches the *objectId* path parameter. \r\n\r\n[Read about Retrieving Documents with the yuuvis® API ](https://yuuvis.io/Documentation/Retrieve-documents)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get document metadata by ID”** endpoint returns the metadata related to the document (object) that matches the *objectId* path parameter. \r\n\r\n[Read about Retrieving Documents with the yuuvis® API ](https://developer.yuuvis.com/Documentation/Retrieve-documents)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -155,7 +155,7 @@
 						"1"
 					]
 				},
-				"description": "The **“Get document metadata by ID (specified version)”** endpoint returns the metadata of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Get document metadata by ID (specified version)”** endpoint returns the metadata of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Retrieving Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Retrieve-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -183,7 +183,7 @@
 						"file"
 					]
 				},
-				"description": "The **“Get document content by ID”** returns the original content file of the document (object) that matches the *objectId* path parameter. \r\n\r\n[Read about Retrieving Documents with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-documents) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get document content by ID”** returns the original content file of the document (object) that matches the *objectId* path parameter. \r\n\r\n[Read about Retrieving Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Retrieve-documents) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -213,7 +213,7 @@
 						"file"
 					]
 				},
-				"description": "The **“Get document content by ID (specified version)”** endpoint returns the content of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. \n\n[Read about Retrieving Documents with the yuuvis® API ](https://yuuvis.io/Documentation/Retrieve-documents) \n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Get document content by ID (specified version)”** endpoint returns the content of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. \n\n[Read about Retrieving Documents with the yuuvis® API ](https://developer.yuuvis.com/Documentation/Retrieve-documents) \n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -247,7 +247,7 @@
 						"search"
 					]
 				},
-				"description": "The **“Search documents by search query”** endpoint requires a JSON body containing your search query. \r\n\r\nThe search parameters *skipCount* and *maxItems* allow paging for search queries, whereby *maxItems* defines the maximum number of entries in the hit list and *skipCount* the maximum number of entries to be skipped. \r\n\r\n[Learn about the yuuvis® CMIS-Based Query Language](https://yuuvis.io/Documentation/Query-language)"
+				"description": "The **“Search documents by search query”** endpoint requires a JSON body containing your search query. \r\n\r\nThe search parameters *skipCount* and *maxItems* allow paging for search queries, whereby *maxItems* defines the maximum number of entries in the hit list and *skipCount* the maximum number of entries to be skipped. \r\n\r\n[Learn about the yuuvis® CMIS-Based Query Language](https://developer.yuuvis.com/Documentation/Query-language)"
 			},
 			"response": []
 		},
@@ -274,7 +274,7 @@
 						"history"
 					]
 				},
-				"description": "The **“Get a list of history entries by ID”** endpoint retrieves information about the actions and modifications that have been carried out for the given document (object) that matches the *objectId* path parameter. \r\n\r\nEach action or modification is stored in a separate history entry. \r\n\r\n[Read about Retrieving the History Entries of a Document with the yuuvis® API](https://yuuvis.io/Documentation/Retrieve-history-entries)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get a list of history entries by ID”** endpoint retrieves information about the actions and modifications that have been carried out for the given document (object) that matches the *objectId* path parameter. \r\n\r\nEach action or modification is stored in a separate history entry. \r\n\r\n[Read about Retrieving the History Entries of a Document with the yuuvis® API](https://developer.yuuvis.com/Documentation/Retrieve-history-entries)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -303,7 +303,7 @@
 						"digest"
 					]
 				},
-				"description": "For already imported documents, a content digest is automatically generated and stored (Secure Hash Algorythm, SHA256) \r\n\r\nTo validate the content digest for a stored document, you use the “Validate content digest by ID” endpoint. Send a request with the objectId which generates a new content digest based on the currently stored document. This newly generated content digest is compared with the formerly generated and stored one. \r\n\r\n[Read about Content Digest Generation and Validation with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store#ImportingDocumentsviaCoreAPI-ContentDigestGeneration) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "For already imported documents, a content digest is automatically generated and stored (Secure Hash Algorythm, SHA256) \r\n\r\nTo validate the content digest for a stored document, you use the “Validate content digest by ID” endpoint. Send a request with the objectId which generates a new content digest based on the currently stored document. This newly generated content digest is compared with the formerly generated and stored one. \r\n\r\n[Read about Content Digest Generation and Validation with the yuuvis® API](https://developer.yuuvis.com/Documentation/Import-and-store#ImportingDocumentsviaCoreAPI-ContentDigestGeneration) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -334,7 +334,7 @@
 						"digest"
 					]
 				},
-				"description": "The **“Validate content digest by ID (specified version)”** endpoint validates the content digest of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. \r\n\r\n[Read about Content Digest Generation and Validation with the yuuvis® API](https://yuuvis.io/Documentation/Import-and-store#ImportingDocumentsviaCoreAPI-ContentDigestGeneration) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \r\n\r\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Validate content digest by ID (specified version)”** endpoint validates the content digest of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. \r\n\r\n[Read about Content Digest Generation and Validation with the yuuvis® API](https://developer.yuuvis.com/Documentation/Import-and-store#ImportingDocumentsviaCoreAPI-ContentDigestGeneration) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \r\n\r\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -368,7 +368,7 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "The **“Update document metadata by ID”** endpoint updates the metadata of the document (object) that matches the *objectId* path parameter. \r\n\r\nTo update the metadata send the request with the new metadata as request body and the ID of the document (object) as *objectId*. If one of the properties is missing in the new metadata, it will be removed from the document (object). \r\n\r\nMost of the system properties cannot be updated or are updated automatically. If the new metadata contains these properties, their values must match the values of the current version. Hence you can retrieve the current metadata using the “GET document metadata by ID“ endpoint first, to use the result. Edit some properties and post it again using this endpoint. \r\n\r\n[Read about Updating Documents with the yuuvis® API](https://yuuvis.io/Documentation/Update-documents)  \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Update document metadata by ID”** endpoint updates the metadata of the document (object) that matches the *objectId* path parameter. \r\n\r\nTo update the metadata send the request with the new metadata as request body and the ID of the document (object) as *objectId*. If one of the properties is missing in the new metadata, it will be removed from the document (object). \r\n\r\nMost of the system properties cannot be updated or are updated automatically. If the new metadata contains these properties, their values must match the values of the current version. Hence you can retrieve the current metadata using the “GET document metadata by ID“ endpoint first, to use the result. Edit some properties and post it again using this endpoint. \r\n\r\n[Read about Updating Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Update-documents)  \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -410,7 +410,7 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "The **“Update specified metadata properties“** endpoint updates only the attributes supplied by the request body in the metadata of the document (object) that matches the *objectId* path parameter. \n\n[Read about Updating Documents with the yuuvis® API](https://yuuvis.io/Documentation/Update-documents) \n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Update specified metadata properties“** endpoint updates only the attributes supplied by the request body in the metadata of the document (object) that matches the *objectId* path parameter. \n\n[Read about Updating Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Update-documents) \n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -451,7 +451,7 @@
 						"file"
 					]
 				},
-				"description": "The **“Update document content by ID”** endpoint updates the content file of the document (object) that matches the *objectId* path parameter.\r\n\r\nYou can name the content by passing the file name over to the Content-Disposition header.\r\n\r\n[Read about Updating Documents with the yuuvis® API](https://yuuvis.io/Documentation/Update-documents) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Update document content by ID”** endpoint updates the content file of the document (object) that matches the *objectId* path parameter.\r\n\r\nYou can name the content by passing the file name over to the Content-Disposition header.\r\n\r\n[Read about Updating Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Update-documents) \r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -481,7 +481,7 @@
 						"{{objectId}}"
 					]
 				},
-				"description": "This **“Delete document by ID”** endpoint deletes the document (object) that matches the given *objectId* path parameter. \n\n[Read about Deleting Documents with the yuuvis® API](https://yuuvis.io/Documentation/Delete-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "This **“Delete document by ID”** endpoint deletes the document (object) that matches the given *objectId* path parameter. \n\n[Read about Deleting Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Delete-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -514,7 +514,7 @@
 						"{{versionNr}}"
 					]
 				},
-				"description": "The **“Delete document by ID (specified version)”** endpoint deletes the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Deleting Documents with the yuuvis® API](https://yuuvis.io/Documentation/Delete-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Delete document by ID (specified version)”** endpoint deletes the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Deleting Documents with the yuuvis® API](https://developer.yuuvis.com/Documentation/Delete-documents)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -544,7 +544,7 @@
 						"slide"
 					]
 				},
-				"description": "The **“Get Image Rendition”** endpoint generates and returns a PNG file of the content's first page of the document (object) that matches the *objectId* path parameter. This PNG file is a small preview with the maximum dimensions 256x256.\r\n\r\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get Image Rendition”** endpoint generates and returns a PNG file of the content's first page of the document (object) that matches the *objectId* path parameter. This PNG file is a small preview with the maximum dimensions 256x256.\r\n\r\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -576,7 +576,7 @@
 						"slide"
 					]
 				},
-				"description": "The **“Get Image Rendition”** endpoint generates and returns a PNG file of the content's first page of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. This PNG file is a small preview with the maximum dimensions 256x256.\r\n\r\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \r\n\r\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Get Image Rendition”** endpoint generates and returns a PNG file of the content's first page of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. This PNG file is a small preview with the maximum dimensions 256x256.\r\n\r\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\r\n\r\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \r\n\r\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -606,7 +606,7 @@
 						"pdf"
 					]
 				},
-				"description": "The **“Get PDF Rendition“** endpoint generates and returns a PDF rendition of the content of the document (object) that matches the *objectId* path parameter. \n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get PDF Rendition“** endpoint generates and returns a PDF rendition of the content of the document (object) that matches the *objectId* path parameter. \n\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -638,7 +638,7 @@
 						"pdf"
 					]
 				},
-				"description": "The **“Get PDF Rendition (specified version)”** endpoint generates and returns a PDF rendition of the content of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. \n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Get PDF Rendition (specified version)”** endpoint generates and returns a PDF rendition of the content of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter. \n\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -668,7 +668,7 @@
 						"text"
 					]
 				},
-				"description": "The **“Get Text Rendition”** endpoint generates and returns a text rendition of the content of the document (object) that matches the *objectId* path parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get Text Rendition”** endpoint generates and returns a text rendition of the content of the document (object) that matches the *objectId* path parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -700,7 +700,7 @@
 						"text"
 					]
 				},
-				"description": "The **“Get Text Rendition (version)”** endpoint generates and returns a text rendition of the content of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://yuuvis.io/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
+				"description": "The **“Get Text Rendition (version)”** endpoint generates and returns a text rendition of the content of the version matching the *versionNr* path parameter of the document (object) that matches the *objectId* path parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store) \n\nThe versionNr path parameter must point to an existing version of the specified object. [Read about versioning with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Update-documents#UpdatingDocumentsviaCoreAPI-Versioningversioning)"
 			},
 			"response": []
 		},
@@ -730,7 +730,7 @@
 						"extract"
 					]
 				},
-				"description": "The **“Get Extraction Rendition“** endpoint extracts and returns all metadata from the document (object) that matches the *objectId* path parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://yuuvis.io/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://yuuvis.io/Documentation/Import-and-store)"
+				"description": "The **“Get Extraction Rendition“** endpoint extracts and returns all metadata from the document (object) that matches the *objectId* path parameter.\n\n[Read about Rendition Requests with the yuuvis® API](https://developer.yuuvis.com/Documentation/Rendition-requests)\n\nThe objectId path parameter must correspond to a previously imported object. [Read about importing objects with the yuuvis® API.](https://developer.yuuvis.com/Documentation/Import-and-store)"
 			},
 			"response": []
 		},
@@ -751,7 +751,7 @@
 						"native"
 					]
 				},
-				"description": "The **“Get the applied tenant schema“** endpoint returns the applied schema of the tenant (JSON / XML) belonging to you as the logged on user. The applied schema is the tenant schema, enhanced by the global schema and the system properties.\r\n\r\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
+				"description": "The **“Get the applied tenant schema“** endpoint returns the applied schema of the tenant (JSON / XML) belonging to you as the logged on user. The applied schema is the tenant schema, enhanced by the global schema and the system properties.\r\n\r\n[Learn about yuuvis® API schema](https://developer.yuuvis.com/Documentation/Schema-definition)"
 			},
 			"response": []
 		},
@@ -777,7 +777,7 @@
 						"schema"
 					]
 				},
-				"description": "The **“Get the raw tenant schema“** endpoint returns the raw schema of the tenant (XML) belonging to you as the logged on user.\r\n\r\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
+				"description": "The **“Get the raw tenant schema“** endpoint returns the raw schema of the tenant (XML) belonging to you as the logged on user.\r\n\r\n[Learn about yuuvis® API schema](https://developer.yuuvis.com/Documentation/Schema-definition)"
 			},
 			"response": []
 		},
@@ -813,7 +813,7 @@
 						"validate"
 					]
 				},
-				"description": "The **“Validate a schema”** endpoint validates a schema and returns a list of validation error messages, if any.\r\n\r\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
+				"description": "The **“Validate a schema”** endpoint validates a schema and returns a list of validation error messages, if any.\r\n\r\n[Learn about yuuvis® API schema](https://developer.yuuvis.com/Documentation/Schema-definition)"
 			},
 			"response": []
 		},
@@ -849,7 +849,7 @@
 						""
 					]
 				},
-				"description": "The **“Update the tenant schema”** endpoint validates your schema first, before it will completely overwrite the existing one. If the schema is not valid, no update takes place.\n\n[Learn about yuuvis® API schema](https://yuuvis.io/Documentation/Schema-definition)"
+				"description": "The **“Update the tenant schema”** endpoint validates your schema first, before it will completely overwrite the existing one. If the schema is not valid, no update takes place.\n\n[Learn about yuuvis® API schema](https://developer.yuuvis.com/Documentation/Schema-definition)"
 			},
 			"response": []
 		}
