@@ -4,7 +4,7 @@ This repository holds the yuuvis® API calls to run in [Postman](https://www.get
 
 Import the collection.json into [Postman](https://www.getpostman.com/) and feel free to make use of the sample metadata.json and newschema.xml files to make calls.
 
-To learn more about yuuvis® products, please refer to [yuuvis.io](https://developer.yuuvis.com/), try out endpoints in our [developer portal](https://developer.yuuvis.com/Apis) or visit our [Wiki](https://developer.yuuvis.com/Documentation/Home) for more detailed information ...
+To learn more about yuuvis® products, please refer to [developer.yuuvis.com](https://developer.yuuvis.com/), try out endpoints in our [developer portal](https://developer.yuuvis.com/Apis) or visit our [Wiki](https://developer.yuuvis.com/Documentation/Home) for more detailed information ...
 
 
 <hr/>
