@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e8b6d122-f20c-4804-bc05-240485b5bf3d",
+		"_postman_id": "5903a864-54b0-4445-a9c9-3d5242fb4d55",
 		"name": "Yuuvis® Ultimate Postman Collection 2.0",
 		"description": "This collection expects a Postman environment with the following variables:\n\n\"ip\": the IP of the yuuvis® system that you want to test \n\n\"objectId\": the ID of the object that you're currently tryingt to retrieve",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -44,7 +44,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -92,7 +91,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -117,7 +115,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -143,7 +140,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/1",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -171,7 +167,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/contents/file",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -199,7 +194,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/contents/file",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -237,7 +231,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/search",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -263,7 +256,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/history",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -290,7 +282,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/actions/validate/digest",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -319,7 +310,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}/actions/validate/digest",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -358,7 +348,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -400,7 +389,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -439,7 +427,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/contents/file",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -471,7 +458,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -502,7 +488,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/{{objectId}}/versions/{{versionNr}}",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -531,7 +516,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/slide",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -561,7 +545,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/slide",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -593,7 +576,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/pdf",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -623,7 +605,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/pdf",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -655,7 +636,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/text",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -685,7 +665,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/versions/{{versionNr}}/contents/renditions/text",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -717,7 +696,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/dms-view/objects/{{objectId}}/contents/renditions/extract",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -738,15 +716,20 @@
 			"name": "Get the applied tenant schema",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{key}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{ip}}/dms/schema/native",
-
+					"raw": "{{ip}}/dms-core/schema/native",
 					"host": [
 						"{{ip}}"
 					],
 					"path": [
-						"dms",
+						"dms-core",
 						"schema",
 						"native"
 					]
@@ -768,7 +751,6 @@
 				],
 				"url": {
 					"raw": "{{ip}}/admin/schema",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -803,7 +785,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/admin/schema/validate",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -839,7 +820,6 @@
 				},
 				"url": {
 					"raw": "{{ip}}/admin/schema/",
-
 					"host": [
 						"{{ip}}"
 					],
@@ -858,7 +838,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1c956d74-131d-4d75-a0a3-48124cfbedbd",
+				"id": "e8988f8a-db45-478e-b159-27d435f5566e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -868,7 +848,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "49b29f85-59d7-4c2c-9b33-bc0664d5b2d6",
+				"id": "8f49f47c-616a-413e-aa25-1eb95eccded3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -878,22 +858,19 @@
 	],
 	"variable": [
 		{
-			"id": "77f21bf2-959e-46d2-b78c-929ba08deba9",
+			"id": "93ccd86e-f9f5-4c1b-a18b-5f6f4e9c431a",
 			"key": "objectId",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "13a9c91d-b838-4285-b077-65a679eddc12",
+			"id": "238184be-9db8-418d-ac0f-803d9e6ae0e0",
 			"key": "ip",
-			"value": "https://api.yuuvis.io",
-			"type": "string"
+			"value": "https://api.yuuvis.io"
 		},
 		{
-			"id": "d280e2c2-297e-49f3-98d2-ea2a2de94b66",
+			"id": "a9bd161c-b9cb-4e74-811c-6473b83f7c78",
 			"key": "key",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	],
 	"protocolProfileBehavior": {}
