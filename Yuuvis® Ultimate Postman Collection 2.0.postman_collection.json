@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5903a864-54b0-4445-a9c9-3d5242fb4d55",
+		"_postman_id": "e6a67a6f-046f-4a4a-b2bc-80508e00b893",
 		"name": "Yuuvis® Ultimate Postman Collection 2.0",
 		"description": "This collection expects a Postman environment with the following variables:\n\n\"ip\": the IP of the yuuvis® system that you want to test \n\n\"objectId\": the ID of the object that you're currently tryingt to retrieve",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -32,13 +32,13 @@
 							"key": "data",
 							"description": "JSON-File containing metadata for a single object.",
 							"type": "file",
-							"src": []
+							"src": "/C:/Users/oelschlaegel/Documents/Metadaten/metadata_image_with_content.json"
 						},
 						{
 							"key": "cid_63apple",
 							"description": "Content object to be imported.",
 							"type": "file",
-							"src": []
+							"src": "/C:/Users/oelschlaegel/Documents/Testdokumente/Test-png.png"
 						}
 					]
 				},
@@ -227,7 +227,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM system:object\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 50\r\n  }\r\n}"
+					"raw": "{\r\n  \"query\": {\r\n    \"statement\": \"SELECT * FROM system:object where CONTAINS('test')\",\r\n    \"skipCount\": 0,\r\n    \"maxItems\": 10\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "{{ip}}/dms-core/objects/search",
@@ -832,13 +832,39 @@
 				"description": "The **“Update the tenant schema”** endpoint validates your schema first, before it will completely overwrite the existing one. If the schema is not valid, no update takes place.\n\n[Learn about yuuvis® API schema](https://developer.yuuvis.com/Documentation/Schema-definition)"
 			},
 			"response": []
+		},
+		{
+			"name": "Get admin metrics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{ip}}/admin/metrics/",
+					"host": [
+						"{{ip}}"
+					],
+					"path": [
+						"admin",
+						"metrics",
+						""
+					]
+				},
+				"description": "The **\"Get admin metrics\"** endpoint provides the total number of objects imported in the tenant as well as the disk space used in total. The dosk space is provided in Bytes."
+			},
+			"response": []
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e8988f8a-db45-478e-b159-27d435f5566e",
+				"id": "1a252a3d-3445-41e3-8fd4-5d0443773e4c",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -848,7 +874,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "8f49f47c-616a-413e-aa25-1eb95eccded3",
+				"id": "142e464b-b040-4a3a-9c7d-bf48ec635f17",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -858,19 +884,19 @@
 	],
 	"variable": [
 		{
-			"id": "93ccd86e-f9f5-4c1b-a18b-5f6f4e9c431a",
+			"id": "47fca427-4c99-4aa0-8a6d-64db86ff8021",
 			"key": "objectId",
 			"value": ""
 		},
 		{
-			"id": "238184be-9db8-418d-ac0f-803d9e6ae0e0",
+			"id": "bcb15891-9baf-4f09-b53e-e3556bb1343b",
 			"key": "ip",
 			"value": "https://api.yuuvis.io"
 		},
 		{
-			"id": "a9bd161c-b9cb-4e74-811c-6473b83f7c78",
+			"id": "f63b8538-b6b4-4ac9-a3c3-c1d50a80c2d7",
 			"key": "key",
-			"value": ""
+			"value": "5852efab5a954876bf89eb172c59101b"
 		}
 	],
 	"protocolProfileBehavior": {}
