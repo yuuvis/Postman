@@ -855,7 +855,7 @@
 						""
 					]
 				},
-				"description": "The **\"Get admin metrics\"** endpoint provides the total number of objects imported in the tenant as well as the disk space used in total. The dosk space is provided in Bytes."
+				"description": "The **\"Get admin metrics\"** endpoint provides the total number of objects imported in the tenant as well as the disk space used in total. The disk space is provided in Bytes."
 			},
 			"response": []
 		}
@@ -884,17 +884,17 @@
 	],
 	"variable": [
 		{
-			"id": "47fca427-4c99-4aa0-8a6d-64db86ff8021",
+			"id": "0c3cbbce-1ab0-4511-8b76-15f2a1457001",
 			"key": "objectId",
 			"value": ""
 		},
 		{
-			"id": "bcb15891-9baf-4f09-b53e-e3556bb1343b",
+			"id": "e241d36a-a676-4927-b7ad-c68185626c7b",
 			"key": "ip",
 			"value": "https://api.yuuvis.io"
 		},
 		{
-			"id": "f63b8538-b6b4-4ac9-a3c3-c1d50a80c2d7",
+			"id": "2c32bb79-d866-4b22-bd20-f6a7b585701e",
 			"key": "key",
 			"value": "5852efab5a954876bf89eb172c59101b"
 		}
